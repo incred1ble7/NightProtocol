@@ -13,13 +13,25 @@ using Object = UnityEngine.Object;
 public static class MechanicsSetup
 {
     const string Root = "Assets/NightProtocol/Mechanics";
-    const string Work = "C:/Users/aser/Documents/Codex/2026-11-14/files-mentioned-by-the-user-1/work";
+    static string Work { get { var path=Path.GetFullPath("Library/MechanicsChecks");Directory.CreateDirectory(path);return path; } }
     const string ScenePath = "Assets/Scenes/GreyBox_sanya.unity";
-    static readonly string[] Names = { "SingleDoor", "DoubleDoor", "ElectricalPanel", "Generator", "LightSwitch" };
+    static readonly string[] Names = { "SingleDoor", "DoubleDoor", "ElectricalPanel", "Generator", "LightSwitch", "StandaloneSwitch", "StandaloneRedLever", "StandaloneGeneratorLever" };
     static readonly Dictionary<string, Material> Materials = new Dictionary<string, Material>();
 
     [MenuItem("Night Protocol/Mechanics/Build prefabs and Greybox setup")]
     public static void BuildMenu() { Debug.Log(Build()); }
+    [MenuItem("Night Protocol/Mechanics/Validate prefabs and scene")]
+    public static void ValidateMenu() { Debug.Log(Validate()); }
+    [MenuItem("Night Protocol/Mechanics/Run interaction checks (Play Mode)")]
+    public static void RuntimeTestMenu() { Debug.Log(RuntimeTest()); }
+    public static string ExportPackage(string path)
+    {
+        AssetDatabase.SaveAssets();
+        var assets=AssetDatabase.FindAssets("",new[]{Root}).Select(AssetDatabase.GUIDToAssetPath)
+            .Where(p=>!AssetDatabase.IsValidFolder(p) && !p.Contains("MechanicsEditorBridge")).Concat(new[]{ScenePath}).ToArray();
+        AssetDatabase.ExportPackage(assets,path,ExportPackageOptions.Recurse|ExportPackageOptions.IncludeDependencies);
+        return path;
+    }
     public static string Build()
     {
         if (Application.isPlaying) throw new Exception("Stop Play Mode before rebuilding.");
@@ -205,6 +217,16 @@ public static class MechanicsSetup
                 Object.DestroyImmediate(f.GetComponent<MeshCollider>());Box(f.gameObject,0.06f);
             }
         }
+        else if(name.StartsWith("Standalone"))
+        {
+            string part=name=="StandaloneSwitch"?"Lever":name=="StandaloneRedLever"?"Lever.001":"Lever.002";
+            var t=Child(visual.transform,part);
+            var m=Interaction(root,name=="StandaloneSwitch"?"Panel switch":name=="StandaloneRedLever"?"Red main lever":"Generator lever",name=="StandaloneGeneratorLever"?0.65f:0.35f,AddAnimator(t.gameObject,name,name,part,true));
+            foreach(var f in t.GetComponentsInChildren<MeshFilter>())
+            {
+                Object.DestroyImmediate(f.GetComponent<MeshCollider>());Box(f.gameObject,0.055f);
+            }
+        }
         else
         {
             var t=Child(visual.transform,"Rocker");Object.DestroyImmediate(t.GetComponent<MeshCollider>());Box(t.gameObject,0.025f);
@@ -242,7 +264,7 @@ public static class MechanicsSetup
                 if(cam.CompareTag("MainCamera")){cam.enabled=false;var listener=cam.GetComponent<AudioListener>();if(listener)listener.enabled=false;}
             }
         }
-        var player=new GameObject("Greybox_Player");player.transform.SetParent(area.transform,false);player.transform.localPosition=new Vector3(0,0.12f,-5);
+        var player=new GameObject("Greybox_Player");player.transform.SetParent(area.transform,false);player.transform.localPosition=new Vector3(0,0.12f,-6.5f);
         var cc=player.AddComponent<CharacterController>();cc.height=1.8f;cc.radius=0.28f;cc.center=new Vector3(0,0.9f,0);cc.stepOffset=0.25f;cc.skinWidth=0.03f;
         var cameraGO=new GameObject("PlayerCamera");cameraGO.tag="MainCamera";cameraGO.transform.SetParent(player.transform,false);cameraGO.transform.localPosition=new Vector3(0,1.65f,0);
         var camera=cameraGO.AddComponent<Camera>();camera.fieldOfView=68;camera.nearClipPlane=0.05f;camera.farClipPlane=500;cameraGO.AddComponent<AudioListener>();
@@ -271,7 +293,7 @@ public static class MechanicsSetup
             }
             report.Add("PASS "+name+": "+prefab.GetComponentsInChildren<MeshRenderer>().Length+" renderers, "+controls.Length+" independent controls");
         }
-        var player=Object.FindFirstObjectByType<GreyboxFirstPerson>();Require(player,"Missing first-person controller");
+        var player=Object.FindAnyObjectByType<GreyboxFirstPerson>();Require(player,"Missing first-person controller");
         Require(player.viewCamera && player.viewCamera.enabled,"Missing player camera");
         Physics.SyncTransforms();
         Require(Physics.Raycast(player.transform.position+Vector3.up,Vector3.down,3),"Player has no ground");
@@ -283,7 +305,7 @@ public static class MechanicsSetup
     public static string RuntimeTest()
     {
         if(!Application.isPlaying)throw new Exception("Runtime test requires Play Mode.");
-        var controls=Object.FindObjectsByType<MechanicalInteractable>(FindObjectsSortMode.None);
+        var controls=Object.FindObjectsByType<MechanicalInteractable>();
         var report=new List<string>();
         Require(controls.Length==11,"Expected 11 independent targets (2 doors, 7 panel, generator, light)");
         foreach(var c in controls){c.SetState(false);c.Advance(10f);}
@@ -325,11 +347,23 @@ public static class MechanicsSetup
         lightSwitch.SetState(true);Require(lightSwitch.controlledLights.All(l=>l.enabled),"Light failed on");
         lightSwitch.SetState(false);Require(lightSwitch.controlledLights.All(l=>!l.enabled),"Light failed off");
         report.Add("PASS Light switch changes the scene lamp");
+        var player=Object.FindAnyObjectByType<GreyboxFirstPerson>();var body=player.GetComponent<CharacterController>();
+        var savedPosition=player.transform.position;
+        body.Move(Vector3.down*2f);Require(body.isGrounded,"Controller does not ground on floor");
+        var grounded=player.transform.position;body.Move(Vector3.right*0.5f);
+        Require(Vector3.Distance(grounded,player.transform.position)>0.45f,"Controller cannot walk on ground");
+        var testDoor=controls.First(c=>c.gameObject.name=="SingleDoor");
+        body.enabled=false;player.transform.position=testDoor.transform.position+Vector3.back*1.0f+Vector3.up*0.05f;body.enabled=true;
+        body.Move(Vector3.forward*2f);Require(player.transform.position.z<testDoor.transform.position.z-0.2f,"Player walks through closed door");
+        testDoor.SetState(true);testDoor.Advance(10);Physics.SyncTransforms();
+        body.Move(Vector3.forward*1.7f);Require(player.transform.position.z>testDoor.transform.position.z+0.4f,"Player cannot pass open door");
+        testDoor.SetState(false);testDoor.Advance(10);body.enabled=false;player.transform.position=savedPosition;body.enabled=true;
+        report.Add("PASS CharacterController grounds, walks, blocks at closed door and passes open door");
         string result=string.Join("\n",report);File.WriteAllText(Path.Combine(Work,"runtime_validation.txt"),result);return result;
     }
     public static string Capture()
     {
-        var player=Object.FindFirstObjectByType<GreyboxFirstPerson>();Require(player,"Missing player");
+        var player=Object.FindAnyObjectByType<GreyboxFirstPerson>();Require(player,"Missing player");
         var cam=player.viewCamera;
         var target=new RenderTexture(1600,900,24);var previous=cam.targetTexture;
         cam.targetTexture=target;cam.Render();
