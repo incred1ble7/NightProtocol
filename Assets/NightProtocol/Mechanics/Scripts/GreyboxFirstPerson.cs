@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
@@ -15,10 +16,14 @@ namespace NightProtocol.Mechanics
         public float jumpHeight = 0.8f;
         [SerializeField] bool allowJumpAndSprint = true;
         [SerializeField] TMP_Text interactionPrompt;
+        [SerializeField] NPShiftProgress shiftProgress;
+        [SerializeField] EventReference footstepSound;
+        [SerializeField, Min(0.1f)] float stepDistance = 1.5f;
         public bool GameplayInputEnabled { get; private set; } = true;
         CharacterController body;
         float pitch;
         float verticalVelocity;
+        float distanceSinceStep;
         Vector3 spawn;
         MechanicalInteractable focused;
         GUIStyle promptStyle, hintStyle;
@@ -78,7 +83,19 @@ namespace NightProtocol.Mechanics
             verticalVelocity -= 18f * Time.deltaTime;
             float speed = allowJumpAndSprint && keys.leftShiftKey.isPressed ? sprintSpeed : walkSpeed;
             Vector3 velocity = (transform.right * movement.x + transform.forward * movement.y) * speed + Vector3.up * verticalVelocity;
+            Vector3 previousPosition = transform.position;
             body.Move(velocity * Time.deltaTime);
+            if (!footstepSound.IsNull && body.isGrounded && movement != Vector2.zero)
+            {
+                Vector3 displacement = transform.position - previousPosition;
+                displacement.y = 0;
+                distanceSinceStep += displacement.magnitude;
+                if (distanceSinceStep >= stepDistance)
+                {
+                    distanceSinceStep %= stepDistance;
+                    RuntimeManager.PlayOneShot(footstepSound, transform.position);
+                }
+            }
             if (transform.position.y < -25f) { body.enabled = false; transform.position = spawn; body.enabled = true; verticalVelocity = 0f; }
             Ray ray = viewCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f));
             focused = null;
@@ -90,14 +107,15 @@ namespace NightProtocol.Mechanics
             }
 
             bool shiftTargetAvailable = shiftTarget && shiftTarget.isActiveAndEnabled && shiftTarget.IsAvailable;
+            string blockReason = focused && shiftProgress ? shiftProgress.MechanicalBlockReason(focused) : null;
             if (interactionPrompt)
                 interactionPrompt.text = active
-                    ? shiftTargetAvailable ? shiftTarget.Prompt : focused ? "[E] " + focused.Prompt : string.Empty
+                    ? shiftTargetAvailable ? shiftTarget.Prompt : focused ? blockReason ?? "[E] " + focused.Prompt : string.Empty
                     : "Click to look around";
 
             if (!active || !keys.eKey.wasPressedThisFrame) return;
             if (shiftTargetAvailable) shiftTarget.Interact();
-            else if (focused) focused.Toggle();
+            else if (focused && blockReason == null) focused.Toggle();
         }
         public static MechanicalInteractable FindTarget(Ray ray, float distance)
         {
