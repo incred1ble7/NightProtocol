@@ -1,9 +1,74 @@
 fileFormatVersion: 2
-guid: c2a7ebfc6328b47439ffe5d175c30f4f
+guid: 15728a75e3ea3c74884e41fbdeb5fe53
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Concrete_Aged
+    second: {fileID: 2100000, guid: 7f781fdc13bac444699d0a702083b840, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ControlRoom_Cladding_Ribbed
+    second: {fileID: 2100000, guid: 9bd98a0e5631dfc489cbb7dfcb3ebb8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ControlRoom_InteriorPanel
+    second: {fileID: 2100000, guid: 8ffab7ce3a7a27b4c978a065974cd375, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ControlRoom_Roof_Trapezoidal
+    second: {fileID: 2100000, guid: fe51d685477f87a45b02a9274f376d86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ControlRoom_Trim_Painted
+    second: {fileID: 2100000, guid: c251e6e3487e8af4ab4121eefe5193f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Glass_Window_Dirty
+    second: {fileID: 2100000, guid: 404db4c70adbb474ebf93f9977ffcc81, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Steel_CheckerPlate
+    second: {fileID: 2100000, guid: 1976404c753e76743bb25cc291152c71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Steel_Galvanized_Plain
+    second: {fileID: 2100000, guid: 07bd4815120b0d74b9282277385c2afc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Steel_Grating_Galvanized
+    second: {fileID: 2100000, guid: c80f56ab50c90064ba3c11b8795a77f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Steel_Grating_Galvanized_Edge
+    second: {fileID: 2100000, guid: 07bd4815120b0d74b9282277385c2afc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Steel_Painted_BlueGrey
+    second: {fileID: 2100000, guid: d4f181597fe0a4443bcd86858a3b3cb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Steel_Painted_Graphite
+    second: {fileID: 2100000, guid: 7ebb6e4ef21e6004da30496be6913d82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Steel_Painted_SafetyYellow
+    second: {fileID: 2100000, guid: bd8d4c0b9663bd548bfd7b646f2b6c23, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
