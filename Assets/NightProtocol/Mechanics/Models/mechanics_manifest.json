@@ -1,0 +1,305 @@
+{
+  "assets": [
+    {
+      "name": "SingleDoor",
+      "root": "SingleDoor",
+      "moving": [
+        {
+          "name": "DoorLeaf",
+          "axis": 2,
+          "angle_off": 0,
+          "angle_on": 95,
+          "pivot": [
+            0.5198216438293457,
+            0.0,
+            0.06202774494886398
+          ]
+        }
+      ],
+      "seconds": 1.1,
+      "frames": {
+        "on": [
+          1,
+          31
+        ],
+        "off": [
+          41,
+          71
+        ]
+      }
+    },
+    {
+      "name": "DoubleDoor",
+      "root": "DoubleDoor",
+      "moving": [
+        {
+          "name": "DoorLeft",
+          "axis": 2,
+          "angle_off": 0,
+          "angle_on": -95,
+          "pivot": [
+            -1.0636043548583984,
+            0.0,
+            0.06202774494886398
+          ]
+        },
+        {
+          "name": "DoorRight",
+          "axis": 2,
+          "angle_off": 0,
+          "angle_on": 95,
+          "pivot": [
+            1.0636048316955566,
+            0.0,
+            0.06202774494886398
+          ]
+        }
+      ],
+      "seconds": 1.1,
+      "frames": {
+        "on": [
+          1,
+          31
+        ],
+        "off": [
+          41,
+          71
+        ]
+      }
+    },
+    {
+      "name": "ElectricalPanel",
+      "root": "ElectricalPanel",
+      "moving": [
+        {
+          "name": "MainLever",
+          "axis": 1,
+          "angle_off": 0,
+          "angle_on": 90,
+          "pivot": [
+            0.5315079092979431,
+            -0.23532404005527496,
+            0.9189813137054443
+          ]
+        },
+        {
+          "name": "Switch01",
+          "axis": 0,
+          "angle_off": -80,
+          "angle_on": 0,
+          "pivot": [
+            -0.3421746492385864,
+            -0.24899999797344208,
+            1.0544538497924805
+          ]
+        },
+        {
+          "name": "Switch02",
+          "axis": 0,
+          "angle_off": -80,
+          "angle_on": 0,
+          "pivot": [
+            0.0,
+            -0.24899999797344208,
+            1.0544538497924805
+          ]
+        },
+        {
+          "name": "Switch03",
+          "axis": 0,
+          "angle_off": -80,
+          "angle_on": 0,
+          "pivot": [
+            0.3468141257762909,
+            -0.24899999797344208,
+            1.0544538497924805
+          ]
+        },
+        {
+          "name": "Switch04",
+          "axis": 0,
+          "angle_off": -80,
+          "angle_on": 0,
+          "pivot": [
+            -0.3421746492385864,
+            -0.24899999797344208,
+            0.7112507224082947
+          ]
+        },
+        {
+          "name": "Switch05",
+          "axis": 0,
+          "angle_off": -80,
+          "angle_on": 0,
+          "pivot": [
+            0.0,
+            -0.24899999797344208,
+            0.7112507224082947
+          ]
+        },
+        {
+          "name": "Switch06",
+          "axis": 0,
+          "angle_off": -80,
+          "angle_on": 0,
+          "pivot": [
+            0.3468141257762909,
+            -0.24899999797344208,
+            0.7112507224082947
+          ]
+        }
+      ],
+      "seconds": 0.32,
+      "frames": {
+        "on": [
+          1,
+          31
+        ],
+        "off": [
+          41,
+          71
+        ]
+      }
+    },
+    {
+      "name": "Generator",
+      "root": "Generator",
+      "moving": [
+        {
+          "name": "GeneratorLever",
+          "axis": 1,
+          "angle_off": 0,
+          "angle_on": -85,
+          "pivot": [
+            -0.01707780361175537,
+            0.001211799681186676,
+            0.7948747873306274
+          ]
+        }
+      ],
+      "seconds": 0.65,
+      "frames": {
+        "on": [
+          1,
+          31
+        ],
+        "off": [
+          41,
+          71
+        ]
+      }
+    },
+    {
+      "name": "LightSwitch",
+      "root": "LightSwitch",
+      "moving": [
+        {
+          "name": "Rocker",
+          "axis": 0,
+          "angle_off": -16,
+          "angle_on": 16,
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "seconds": 0.2,
+      "frames": {
+        "on": [
+          1,
+          31
+        ],
+        "off": [
+          41,
+          71
+        ]
+      }
+    },
+    {
+      "name": "StandaloneSwitch",
+      "root": "StandaloneSwitch",
+      "moving": [
+        {
+          "name": "Lever",
+          "axis": 0,
+          "angle_off": -80,
+          "angle_on": 0,
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "seconds": 0.35,
+      "frames": {
+        "on": [
+          1,
+          31
+        ],
+        "off": [
+          41,
+          71
+        ]
+      }
+    },
+    {
+      "name": "StandaloneRedLever",
+      "root": "StandaloneRedLever",
+      "moving": [
+        {
+          "name": "Lever.001",
+          "axis": 1,
+          "angle_off": 0,
+          "angle_on": 90,
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "seconds": 0.35,
+      "frames": {
+        "on": [
+          1,
+          31
+        ],
+        "off": [
+          41,
+          71
+        ]
+      }
+    },
+    {
+      "name": "StandaloneGeneratorLever",
+      "root": "StandaloneGeneratorLever",
+      "moving": [
+        {
+          "name": "Lever.002",
+          "axis": 1,
+          "angle_off": 0,
+          "angle_on": -85,
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "seconds": 0.65,
+      "frames": {
+        "on": [
+          1,
+          31
+        ],
+        "off": [
+          41,
+          71
+        ]
+      }
+    }
+  ]
+}
