@@ -1,3 +1,4 @@
+using FMODUnity;
 using TMPro;
 using NightProtocol.Mechanics;
 using UnityEngine;
@@ -12,6 +13,7 @@ public sealed class NPOperatorTerminal : NPInteractable
     [SerializeField] private Button startShiftButton;
     [SerializeField] private Button submitReportButton;
     [SerializeField] private Button closeButton;
+    [SerializeField] private EventReference interactionSound;
 
     public override string Prompt => "E - Operator terminal";
 
@@ -49,6 +51,8 @@ public sealed class NPOperatorTerminal : NPInteractable
 
         terminalWindow.SetActive(true);
         playerController.SetGameplayInput(false);
+        if (!interactionSound.IsNull)
+            RuntimeManager.PlayOneShot(interactionSound, transform.position);
         Refresh();
     }
 
@@ -79,17 +83,10 @@ public sealed class NPOperatorTerminal : NPInteractable
             return;
 
         if (statusLabel != null)
-        {
-            if (shiftProgress.ReportSubmitted)
-                statusLabel.text = "SHIFT 01 COMPLETE\nReport submitted";
-            else if (!shiftProgress.ShiftStarted)
-                statusLabel.text = "SHIFT 01\nPress Start Shift to begin";
-            else
-                statusLabel.text = $"PERIMETER CHECK\n{shiftProgress.InspectedCount}/{shiftProgress.RequiredCount} checkpoints inspected";
-        }
+            statusLabel.text = $"SHIFT 01\n{shiftProgress.Objective}";
 
         if (startShiftButton != null)
-            startShiftButton.interactable = !shiftProgress.ShiftStarted;
+            startShiftButton.interactable = shiftProgress.CurrentStep == NPShiftProgress.Step.StartShift;
 
         if (submitReportButton != null)
             submitReportButton.interactable = shiftProgress.CanSubmitReport;
