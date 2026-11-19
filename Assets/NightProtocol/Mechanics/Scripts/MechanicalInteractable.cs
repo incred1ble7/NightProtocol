@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,6 +14,8 @@ namespace NightProtocol.Mechanics
         public Animator[] animators;
         public Light[] controlledLights;
         public bool initiallyOn;
+        [SerializeField] EventReference turnOnSound;
+        [SerializeField] EventReference turnOffSound;
         public UnityEvent<bool> onStateChanged = new UnityEvent<bool>();
         public bool IsOn { get; private set; }
         public float Progress { get; private set; }
@@ -36,6 +39,9 @@ namespace NightProtocol.Mechanics
             IsOn = on;
             ApplyLights();
             onStateChanged.Invoke(on);
+            var sound = on ? turnOnSound : turnOffSound;
+            if (!sound.IsNull)
+                RuntimeManager.PlayOneShot(sound, transform.position);
         }
         // Keeping progress separate from the target allows smooth reversal mid-motion.
         public void Advance(float deltaTime)
