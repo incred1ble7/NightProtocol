@@ -3,7 +3,12 @@ guid: 41ec88c6dc1613040b09de7bb680f864
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PaperSheets_Low
+    second: {fileID: 2100000, guid: 5ea50b8cff8ccd8469e9eec4df085f84, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

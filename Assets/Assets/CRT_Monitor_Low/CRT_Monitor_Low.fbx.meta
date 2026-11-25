@@ -3,7 +3,12 @@ guid: 5871069d14432b5478eb874363ef6b20
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_CRT_Monitor_Low
+    second: {fileID: 2100000, guid: 5a2c1a20a9ec0a442951cb6485564fda, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

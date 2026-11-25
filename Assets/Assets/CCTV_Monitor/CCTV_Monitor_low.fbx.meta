@@ -3,7 +3,12 @@ guid: c9993aecf8af468499d4812968342db4
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_CCTV_Monitor
+    second: {fileID: 2100000, guid: 1ca94fc11bf88bc40b8da9d64d1aa17b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
