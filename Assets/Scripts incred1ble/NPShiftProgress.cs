@@ -55,7 +55,7 @@ public sealed class NPShiftProgress : MonoBehaviour
         Step.Generator => "Activate the test lever in the generator building",
         Step.SubmitReport => "Return to the operator terminal and submit the report",
         Step.Sleep => "Report submitted. Go to the bed to end your shift",
-        Step.Finished => "SHIFT 01 COMPLETE",
+        Step.Finished => "Day 1 complete",
         _ => string.Empty
     };
 

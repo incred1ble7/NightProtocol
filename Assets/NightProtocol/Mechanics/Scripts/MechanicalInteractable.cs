@@ -31,6 +31,11 @@ namespace NightProtocol.Mechanics
             ApplyPose();
             ApplyLights();
         }
+        void Start()
+        {
+            ApplyPose();
+            ApplyLights();
+        }
         void Update() { Advance(Time.deltaTime); }
         public void Toggle() { SetState(!IsOn); }
         public void SetState(bool on)
@@ -43,7 +48,6 @@ namespace NightProtocol.Mechanics
             if (!sound.IsNull)
                 RuntimeManager.PlayOneShot(sound, transform.position);
         }
-        // Keeping progress separate from the target allows smooth reversal mid-motion.
         public void Advance(float deltaTime)
         {
             Progress = Mathf.MoveTowards(Progress, IsOn ? 1f : 0f, Mathf.Max(0f, deltaTime) / Mathf.Max(0.05f, travelSeconds));

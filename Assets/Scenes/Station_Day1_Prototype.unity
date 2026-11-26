@@ -9991,13 +9991,48 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 383016233}
   m_SourcePrefab: {fileID: 100100000, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
 --- !u!4 &383016230 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
   m_PrefabInstance: {fileID: 383016229}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &383016231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+  m_PrefabInstance: {fileID: 383016229}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &383016232 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+  m_PrefabInstance: {fileID: 383016229}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &383016233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383016231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a13af85e8cee54e9de758e21599e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NightProtocol.Mechanics.SwitchIndicator
+  source: {fileID: 1990032897}
+  lamps:
+  - {fileID: 383016232}
+  - {fileID: 1990032908}
+  offMaterialIndex: 1
+  onMaterialIndex: 2
+  offColor: {r: 2, g: 0, b: 0, a: 1}
+  onColor: {r: 0.15, g: 2.5, b: 0, a: 1}
+  blinkFrequency: 1.1
+  blinkDepth: 0.85
 --- !u!1 &384028274
 GameObject:
   m_ObjectHideFlags: 0
@@ -18665,7 +18700,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SHIFT 01 COMPLETE
+  m_text: 'DAY 1 COMPLETE
+
+    <size=45%>Your shift is over. Get some rest.</size>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31081,13 +31118,48 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1184407857}
   m_SourcePrefab: {fileID: 100100000, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
 --- !u!4 &1184407854 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
   m_PrefabInstance: {fileID: 1184407853}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1184407855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+  m_PrefabInstance: {fileID: 1184407853}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1184407856 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+  m_PrefabInstance: {fileID: 1184407853}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1184407857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184407855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a13af85e8cee54e9de758e21599e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NightProtocol.Mechanics.SwitchIndicator
+  source: {fileID: 1990032901}
+  lamps:
+  - {fileID: 1184407856}
+  - {fileID: 1990032900}
+  offMaterialIndex: 1
+  onMaterialIndex: 2
+  offColor: {r: 2, g: 0, b: 0, a: 1}
+  onColor: {r: 0.15, g: 2.5, b: 0, a: 1}
+  blinkFrequency: 1.1
+  blinkDepth: 0.85
 --- !u!1 &1185380401
 GameObject:
   m_ObjectHideFlags: 0
@@ -31494,13 +31566,48 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1193623959}
   m_SourcePrefab: {fileID: 100100000, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
 --- !u!4 &1193623956 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
   m_PrefabInstance: {fileID: 1193623955}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1193623957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+  m_PrefabInstance: {fileID: 1193623955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1193623958 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+  m_PrefabInstance: {fileID: 1193623955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1193623959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193623957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a13af85e8cee54e9de758e21599e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NightProtocol.Mechanics.SwitchIndicator
+  source: {fileID: 1990032905}
+  lamps:
+  - {fileID: 1193623958}
+  - {fileID: 1990032904}
+  offMaterialIndex: 1
+  onMaterialIndex: 2
+  offColor: {r: 2, g: 0, b: 0, a: 1}
+  onColor: {r: 0.15, g: 2.5, b: 0, a: 1}
+  blinkFrequency: 1.1
+  blinkDepth: 0.85
 --- !u!1 &1193862657
 GameObject:
   m_ObjectHideFlags: 0
@@ -38838,7 +38945,12 @@ MonoBehaviour:
   shiftProgress: {fileID: 1216986812}
   playerController: {fileID: 557911718}
   completionScreen: {fileID: 470003322}
+  completionLabel: {fileID: 672532037}
   fadeSeconds: 1
+  textFadeSeconds: 1.2
+  completionText: 'DAY 1 COMPLETE
+
+    <size=45%>Your shift is over. Get some rest.</size>'
 --- !u!65 &1526771317
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51146,6 +51258,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricalPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 5238969904351894504, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: onAction
+      value: Turn all off
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238969904351894504, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: displayName
+      value: Main breaker
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238969904351894504, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: initiallyOn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6025467518415268873, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: m_Size.x
       value: 0.122687414
@@ -51283,7 +51407,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9136712752546593267, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1184407854}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4217125410808457456, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1990032911}
   m_SourcePrefab: {fileID: 100100000, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
 --- !u!4 &1990032896 stripped
 Transform:
@@ -51323,6 +51450,106 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa9b4d3955539640abc998bc38f984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NightProtocol.Mechanics.MechanicalInteractable
+--- !u!23 &1990032900 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3979150478233246775, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+  m_PrefabInstance: {fileID: 1990032895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1990032901 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3718846131146497609, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+  m_PrefabInstance: {fileID: 1990032895}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa9b4d3955539640abc998bc38f984a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NightProtocol.Mechanics.MechanicalInteractable
+--- !u!23 &1990032902 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2220635147356311197, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+  m_PrefabInstance: {fileID: 1990032895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1990032903 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4078700934020151262, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+  m_PrefabInstance: {fileID: 1990032895}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa9b4d3955539640abc998bc38f984a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NightProtocol.Mechanics.MechanicalInteractable
+--- !u!23 &1990032904 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5010503101107021382, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+  m_PrefabInstance: {fileID: 1990032895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1990032905 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 442345636909105737, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+  m_PrefabInstance: {fileID: 1990032895}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa9b4d3955539640abc998bc38f984a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NightProtocol.Mechanics.MechanicalInteractable
+--- !u!23 &1990032906 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3101578326792421191, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+  m_PrefabInstance: {fileID: 1990032895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1990032907 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3924741790760930788, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+  m_PrefabInstance: {fileID: 1990032895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1990032908 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1790428561117193276, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+  m_PrefabInstance: {fileID: 1990032895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1990032909 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5238969904351894504, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+  m_PrefabInstance: {fileID: 1990032895}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa9b4d3955539640abc998bc38f984a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NightProtocol.Mechanics.MechanicalInteractable
+--- !u!1 &1990032910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4217125410808457456, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+  m_PrefabInstance: {fileID: 1990032895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1990032911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990032910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d285147749adb43be909528fd15a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NightProtocol.Mechanics.MasterSwitch
+  master: {fileID: 1990032909}
+  targets:
+  - {fileID: 1990032899}
+  - {fileID: 1990032898}
+  - {fileID: 1990032897}
+  - {fileID: 1990032905}
+  - {fileID: 1990032903}
+  - {fileID: 1990032901}
+  cascadeDelay: 0.08
 --- !u!1001 &2001135148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52359,13 +52586,48 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2052054504}
   m_SourcePrefab: {fileID: 100100000, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
 --- !u!4 &2052054501 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
   m_PrefabInstance: {fileID: 2052054500}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2052054502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+  m_PrefabInstance: {fileID: 2052054500}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2052054503 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+  m_PrefabInstance: {fileID: 2052054500}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2052054504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052054502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a13af85e8cee54e9de758e21599e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NightProtocol.Mechanics.SwitchIndicator
+  source: {fileID: 1990032903}
+  lamps:
+  - {fileID: 2052054503}
+  - {fileID: 1990032902}
+  offMaterialIndex: 1
+  onMaterialIndex: 2
+  offColor: {r: 2, g: 0, b: 0, a: 1}
+  onColor: {r: 0.15, g: 2.5, b: 0, a: 1}
+  blinkFrequency: 1.1
+  blinkDepth: 0.85
 --- !u!1 &2055131118
 GameObject:
   m_ObjectHideFlags: 0
@@ -52617,13 +52879,47 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2064691729}
   m_SourcePrefab: {fileID: 100100000, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
 --- !u!4 &2064691726 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
   m_PrefabInstance: {fileID: 2064691725}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2064691727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+  m_PrefabInstance: {fileID: 2064691725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2064691728 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+  m_PrefabInstance: {fileID: 2064691725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2064691729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064691727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a13af85e8cee54e9de758e21599e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NightProtocol.Mechanics.SwitchIndicator
+  source: {fileID: 1561601424}
+  lamps:
+  - {fileID: 2064691728}
+  offMaterialIndex: 1
+  onMaterialIndex: 2
+  offColor: {r: 2, g: 0, b: 0, a: 1}
+  onColor: {r: 0.15, g: 2.5, b: 0, a: 1}
+  blinkFrequency: 1.1
+  blinkDepth: 0.85
 --- !u!1001 &2064849083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53269,13 +53565,48 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2091296662}
   m_SourcePrefab: {fileID: 100100000, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
 --- !u!4 &2091296659 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
   m_PrefabInstance: {fileID: 2091296658}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2091296660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+  m_PrefabInstance: {fileID: 2091296658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2091296661 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+  m_PrefabInstance: {fileID: 2091296658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2091296662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091296660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a13af85e8cee54e9de758e21599e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NightProtocol.Mechanics.SwitchIndicator
+  source: {fileID: 1990032899}
+  lamps:
+  - {fileID: 2091296661}
+  - {fileID: 1990032906}
+  offMaterialIndex: 1
+  onMaterialIndex: 2
+  offColor: {r: 2, g: 0, b: 0, a: 1}
+  onColor: {r: 0.15, g: 2.5, b: 0, a: 1}
+  blinkFrequency: 1.1
+  blinkDepth: 0.85
 --- !u!1 &2094093135
 GameObject:
   m_ObjectHideFlags: 0
@@ -54533,13 +54864,48 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2142564582}
   m_SourcePrefab: {fileID: 100100000, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
 --- !u!4 &2142564579 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
   m_PrefabInstance: {fileID: 2142564578}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2142564580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+  m_PrefabInstance: {fileID: 2142564578}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2142564581 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: bd8b133d00e6c224cbd3925ef1131dcb, type: 3}
+  m_PrefabInstance: {fileID: 2142564578}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2142564582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142564580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a13af85e8cee54e9de758e21599e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NightProtocol.Mechanics.SwitchIndicator
+  source: {fileID: 1990032898}
+  lamps:
+  - {fileID: 2142564581}
+  - {fileID: 1990032907}
+  offMaterialIndex: 1
+  onMaterialIndex: 2
+  offColor: {r: 2, g: 0, b: 0, a: 1}
+  onColor: {r: 0.15, g: 2.5, b: 0, a: 1}
+  blinkFrequency: 1.1
+  blinkDepth: 0.85
 --- !u!1001 &2142742983
 PrefabInstance:
   m_ObjectHideFlags: 0
