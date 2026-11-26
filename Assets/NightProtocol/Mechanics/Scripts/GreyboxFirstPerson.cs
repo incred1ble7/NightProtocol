@@ -120,20 +120,22 @@ namespace NightProtocol.Mechanics
                 PlayFootstep(displacement);
         }
 
-        private EventReference FootstepSound => (interiorAudio && interiorAudio.IsInside) || IsOnTowerStep()
+        private EventReference FootstepSound => (interiorAudio && interiorAudio.IsInside) || IsOnTowerSurface()
             ? indoorFootstepSound
             : outdoorFootstepSound;
 
-        private bool IsOnTowerStep()
+        private bool IsOnTowerSurface()
         {
-            if (!towerStairSteps)
+            Transform towerCollision = towerStairSteps ? towerStairSteps.parent : null;
+            if (!towerCollision)
                 return false;
 
             Bounds capsule = body.bounds;
-            float distance = capsule.extents.y + body.stepOffset + body.skinWidth;
-            return Physics.Raycast(capsule.center, Vector3.down, out var ground, distance,
+            float radius = Mathf.Max(0.01f, Mathf.Min(capsule.extents.x, capsule.extents.z) - body.skinWidth);
+            float distance = capsule.extents.y - radius + body.stepOffset + body.skinWidth;
+            return Physics.SphereCast(capsule.center, radius, Vector3.down, out var ground, distance,
                        Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore)
-                   && ground.collider.transform.IsChildOf(towerStairSteps);
+                   && ground.collider.transform.IsChildOf(towerCollision);
         }
 
         private void PlayFootstep(Vector3 displacement)

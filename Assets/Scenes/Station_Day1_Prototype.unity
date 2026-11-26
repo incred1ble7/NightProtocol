@@ -13510,18 +13510,18 @@ MonoBehaviour:
   - {fileID: 1346960183}
   openSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1754849541
+      Data2: 1121912264
+      Data3: -882492231
+      Data4: -2097191263
+    Path: event:/sfx/Computer start
   channelSwitchSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -526497971
+      Data2: 1325326883
+      Data3: 1142959764
+      Data4: -509603861
+    Path: event:/sfx/Computer_Click
 --- !u!65 &390977909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15002,6 +15002,26 @@ PrefabInstance:
       propertyPath: shiftProgress
       value: 
       objectReference: {fileID: 1216986812}
+    - target: {fileID: 3757899612565971631, guid: 5116f63b026ab564b9bd100fb5676922, type: 3}
+      propertyPath: inspectSound.Path
+      value: event:/sfx/inspected
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757899612565971631, guid: 5116f63b026ab564b9bd100fb5676922, type: 3}
+      propertyPath: inspectSound.Guid.Data1
+      value: 1432009683
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757899612565971631, guid: 5116f63b026ab564b9bd100fb5676922, type: 3}
+      propertyPath: inspectSound.Guid.Data2
+      value: 1240200911
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757899612565971631, guid: 5116f63b026ab564b9bd100fb5676922, type: 3}
+      propertyPath: inspectSound.Guid.Data3
+      value: 685102214
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757899612565971631, guid: 5116f63b026ab564b9bd100fb5676922, type: 3}
+      propertyPath: inspectSound.Guid.Data4
+      value: 1844214593
+      objectReference: {fileID: 0}
     - target: {fileID: 4599870277709166063, guid: 5116f63b026ab564b9bd100fb5676922, type: 3}
       propertyPath: m_Size.x
       value: 1.7230769
@@ -16699,25 +16719,25 @@ MonoBehaviour:
   closeButton: {fileID: 470743711}
   interactionSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -36473138
+      Data2: 1089849421
+      Data3: -830472052
+      Data4: -122523207
+    Path: event:/sfx/interaction
   buttonSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -526497971
+      Data2: 1325326883
+      Data3: 1142959764
+      Data4: -509603861
+    Path: event:/sfx/Computer_Click
   reportCompletedSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1828680841
+      Data2: 1287921365
+      Data3: 856953273
+      Data4: -1730455038
+    Path: event:/sfx/task finish
 --- !u!23 &486215749
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18564,6 +18584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 523856676}
   - component: {fileID: 523856675}
+  - component: {fileID: 523856677}
   m_Layer: 0
   m_Name: Interior_Light_Bedroom
   m_TagString: Untagged
@@ -18651,6 +18672,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 402868875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &523856677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523856674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &523978108
 GameObject:
   m_ObjectHideFlags: 0
@@ -31291,6 +31341,46 @@ PrefabInstance:
       value: House_LightSwitch
       objectReference: {fileID: 0}
     - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Path
+      value: event:/sfx/light
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Path
+      value: event:/sfx/light
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data1
+      value: 2044872218
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data2
+      value: 1237975015
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data3
+      value: -726617454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data4
+      value: 1944975419
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data1
+      value: 2044872218
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data2
+      value: 1237975015
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data3
+      value: -726617454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data4
+      value: 1944975419
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
       propertyPath: controlledLights.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -35785,18 +35875,18 @@ MonoBehaviour:
   initiallyOn: 0
   turnOnSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2107468826
+      Data2: 1194817619
+      Data3: 773430917
+      Data4: -1074653083
+    Path: event:/sfx/door sfx
   turnOffSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2107468826
+      Data2: 1194817619
+      Data3: 773430917
+      Data4: -1074653083
+    Path: event:/sfx/door sfx
   onStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -37016,11 +37106,11 @@ MonoBehaviour:
   generatorLoop: {fileID: 1561601425}
   generatorStartSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 2025412668
+      Data2: 1122774527
+      Data3: 1079391920
+      Data4: -360587940
+    Path: event:/sfx/generator
   lateShiftSting:
     Guid:
       Data1: 0
@@ -37742,6 +37832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1249976296}
   - component: {fileID: 1249976295}
+  - component: {fileID: 1249976297}
   m_Layer: 0
   m_Name: Interior_Light_Main
   m_TagString: Untagged
@@ -37829,6 +37920,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 402868875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1249976297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249976294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &1253517118
 GameObject:
   m_ObjectHideFlags: 0
@@ -39064,6 +39184,26 @@ PrefabInstance:
       propertyPath: shiftProgress
       value: 
       objectReference: {fileID: 1216986812}
+    - target: {fileID: 9098899986244936564, guid: b7d32fa104dec9145bec89153351c055, type: 3}
+      propertyPath: inspectSound.Path
+      value: event:/sfx/inspected
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098899986244936564, guid: b7d32fa104dec9145bec89153351c055, type: 3}
+      propertyPath: inspectSound.Guid.Data1
+      value: 1432009683
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098899986244936564, guid: b7d32fa104dec9145bec89153351c055, type: 3}
+      propertyPath: inspectSound.Guid.Data2
+      value: 1240200911
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098899986244936564, guid: b7d32fa104dec9145bec89153351c055, type: 3}
+      propertyPath: inspectSound.Guid.Data3
+      value: 685102214
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098899986244936564, guid: b7d32fa104dec9145bec89153351c055, type: 3}
+      propertyPath: inspectSound.Guid.Data4
+      value: 1844214593
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -53293,6 +53433,46 @@ PrefabInstance:
     - target: {fileID: 5782453518966834952, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
       propertyPath: m_Name
       value: ControlRoom_LightSwitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Path
+      value: event:/sfx/light
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Path
+      value: event:/sfx/light
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data1
+      value: 2044872218
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data2
+      value: 1237975015
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data3
+      value: -726617454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data4
+      value: 1944975419
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data1
+      value: 2044872218
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data2
+      value: 1237975015
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data3
+      value: -726617454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data4
+      value: 1944975419
       objectReference: {fileID: 0}
     - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
       propertyPath: controlledLights.Array.size
