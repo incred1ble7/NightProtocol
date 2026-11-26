@@ -1,6 +1,7 @@
 using FMODUnity;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using TMPro;
 
 namespace NightProtocol.Mechanics
@@ -17,7 +18,11 @@ namespace NightProtocol.Mechanics
         [SerializeField] bool allowJumpAndSprint = true;
         [SerializeField] TMP_Text interactionPrompt;
         [SerializeField] NPShiftProgress shiftProgress;
-        [SerializeField] EventReference footstepSound;
+        [SerializeField] NPInteriorAudio interiorAudio;
+        [FormerlySerializedAs("footstepSound")]
+        [SerializeField] EventReference outdoorFootstepSound;
+        [SerializeField] EventReference indoorFootstepSound;
+        [SerializeField] Transform towerStairSteps;
         [SerializeField, Min(0.1f)] float stepDistance = 1.5f;
         public bool GameplayInputEnabled { get; private set; } = true;
         CharacterController body;
@@ -46,6 +51,7 @@ namespace NightProtocol.Mechanics
             if (enabled) CaptureMouse();
             else
             {
+                distanceSinceStep = 0f;
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 if (interactionPrompt) interactionPrompt.text = string.Empty;
@@ -84,18 +90,9 @@ namespace NightProtocol.Mechanics
             float speed = allowJumpAndSprint && keys.leftShiftKey.isPressed ? sprintSpeed : walkSpeed;
             Vector3 velocity = (transform.right * movement.x + transform.forward * movement.y) * speed + Vector3.up * verticalVelocity;
             Vector3 previousPosition = transform.position;
+            bool groundedBeforeMove = body.isGrounded;
             body.Move(velocity * Time.deltaTime);
-            if (!footstepSound.IsNull && body.isGrounded && movement != Vector2.zero)
-            {
-                Vector3 displacement = transform.position - previousPosition;
-                displacement.y = 0;
-                distanceSinceStep += displacement.magnitude;
-                if (distanceSinceStep >= stepDistance)
-                {
-                    distanceSinceStep %= stepDistance;
-                    RuntimeManager.PlayOneShot(footstepSound, transform.position);
-                }
-            }
+            Vector3 displacement = transform.position - previousPosition;
             if (transform.position.y < -25f) { body.enabled = false; transform.position = spawn; body.enabled = true; verticalVelocity = 0f; }
             Ray ray = viewCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f));
             focused = null;
@@ -113,9 +110,44 @@ namespace NightProtocol.Mechanics
                     ? shiftTargetAvailable ? shiftTarget.Prompt : focused ? blockReason ?? "[E] " + focused.Prompt : string.Empty
                     : "Click to look around";
 
-            if (!active || !keys.eKey.wasPressedThisFrame) return;
-            if (shiftTargetAvailable) shiftTarget.Interact();
-            else if (focused && blockReason == null) focused.Toggle();
+            if (active && keys.eKey.wasPressedThisFrame)
+            {
+                if (shiftTargetAvailable) shiftTarget.Interact();
+                else if (focused && blockReason == null) focused.Toggle();
+            }
+
+            if (GameplayInputEnabled && groundedBeforeMove && body.isGrounded && movement != Vector2.zero)
+                PlayFootstep(displacement);
+        }
+
+        private EventReference FootstepSound => (interiorAudio && interiorAudio.IsInside) || IsOnTowerStep()
+            ? indoorFootstepSound
+            : outdoorFootstepSound;
+
+        private bool IsOnTowerStep()
+        {
+            if (!towerStairSteps)
+                return false;
+
+            Bounds capsule = body.bounds;
+            float distance = capsule.extents.y + body.stepOffset + body.skinWidth;
+            return Physics.Raycast(capsule.center, Vector3.down, out var ground, distance,
+                       Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore)
+                   && ground.collider.transform.IsChildOf(towerStairSteps);
+        }
+
+        private void PlayFootstep(Vector3 displacement)
+        {
+            displacement.y = 0;
+            distanceSinceStep += displacement.magnitude;
+            float stride = Mathf.Max(0.1f, stepDistance);
+            if (distanceSinceStep < stride)
+                return;
+
+            distanceSinceStep %= stride;
+            var sound = FootstepSound;
+            if (!sound.IsNull)
+                RuntimeManager.PlayOneShot(sound, transform.position);
         }
         public static MechanicalInteractable FindTarget(Ray ray, float distance)
         {
