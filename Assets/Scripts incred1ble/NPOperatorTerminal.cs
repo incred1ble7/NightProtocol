@@ -14,6 +14,8 @@ public sealed class NPOperatorTerminal : NPInteractable
     [SerializeField] private Button submitReportButton;
     [SerializeField] private Button closeButton;
     [SerializeField] private EventReference interactionSound;
+    [SerializeField] private EventReference buttonSound;
+    [SerializeField] private EventReference reportCompletedSound;
 
     public override string Prompt => "E - Operator terminal";
 
@@ -46,7 +48,7 @@ public sealed class NPOperatorTerminal : NPInteractable
 
     public override void Interact()
     {
-        if (terminalWindow == null || playerController == null || shiftProgress == null)
+        if (terminalWindow == null || terminalWindow.activeSelf || playerController == null || shiftProgress == null)
             return;
 
         terminalWindow.SetActive(true);
@@ -58,8 +60,11 @@ public sealed class NPOperatorTerminal : NPInteractable
 
     public void Close()
     {
-        if (terminalWindow != null)
-            terminalWindow.SetActive(false);
+        if (terminalWindow == null || !terminalWindow.activeSelf)
+            return;
+
+        terminalWindow.SetActive(false);
+        PlayButtonSound();
 
         if (playerController != null)
             playerController.SetGameplayInput(true);
@@ -67,14 +72,30 @@ public sealed class NPOperatorTerminal : NPInteractable
 
     private void StartShift()
     {
+        if (!terminalWindow || !terminalWindow.activeInHierarchy || !shiftProgress
+            || shiftProgress.CurrentStep != NPShiftProgress.Step.StartShift)
+            return;
+
         shiftProgress.StartShift();
+        PlayButtonSound();
         Refresh();
     }
 
     private void SubmitReport()
     {
-        shiftProgress.SubmitReport();
+        if (!terminalWindow || !terminalWindow.activeInHierarchy || !shiftProgress || !shiftProgress.SubmitReport())
+            return;
+
+        PlayButtonSound();
+        if (!reportCompletedSound.IsNull)
+            RuntimeManager.PlayOneShot(reportCompletedSound);
         Refresh();
+    }
+
+    private void PlayButtonSound()
+    {
+        if (!buttonSound.IsNull)
+            RuntimeManager.PlayOneShot(buttonSound);
     }
 
     private void Refresh()

@@ -1,3 +1,4 @@
+using FMODUnity;
 using NightProtocol.Mechanics;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -10,6 +11,8 @@ public sealed class NPCCTVMonitor : NPInteractable
     [SerializeField] private GameObject monitorWindow;
     [SerializeField] private RawImage monitorImage;
     [SerializeField] private Camera[] cameras;
+    [SerializeField] private EventReference openSound;
+    [SerializeField] private EventReference channelSwitchSound;
 
     private int selectedCamera = -1;
 
@@ -29,25 +32,35 @@ public sealed class NPCCTVMonitor : NPInteractable
 
     public override void Interact()
     {
-        if (!IsAvailable || !playerController || !monitorWindow || !monitorImage)
+        if (!IsAvailable || selectedCamera >= 0 || !playerController || !monitorWindow || !monitorImage)
             return;
         if (cameras == null || cameras.Length != 3 || !cameras[0] || !cameras[0].targetTexture)
             return;
 
         monitorWindow.SetActive(true);
         playerController.SetGameplayInput(false);
-        ShowCamera(0);
+        SelectCamera(0, cameras[0]);
+        if (!openSound.IsNull)
+            RuntimeManager.PlayOneShot(openSound);
     }
 
     public void ShowCamera(int index)
     {
-        if (!monitorWindow || !monitorWindow.activeInHierarchy || index < 0 || index >= cameras.Length)
+        if (selectedCamera < 0 || !monitorWindow || !monitorWindow.activeInHierarchy
+            || index < 0 || index >= cameras.Length || index == selectedCamera)
             return;
 
         Camera camera = cameras[index];
         if (!camera || !camera.targetTexture)
             return;
 
+        SelectCamera(index, camera);
+        if (!channelSwitchSound.IsNull)
+            RuntimeManager.PlayOneShot(channelSwitchSound);
+    }
+
+    private void SelectCamera(int index, Camera camera)
+    {
         DisableSelectedCamera();
         selectedCamera = index;
         monitorImage.texture = camera.targetTexture;

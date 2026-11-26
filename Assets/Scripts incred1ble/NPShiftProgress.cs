@@ -28,6 +28,8 @@ public sealed class NPShiftProgress : MonoBehaviour
     [SerializeField] private MechanicalInteractable[] panelSwitches;
     [SerializeField] private MechanicalInteractable generatorLever;
     [SerializeField] private StudioEventEmitter generatorLoop;
+    [SerializeField] private EventReference generatorStartSound;
+    [SerializeField] private EventReference lateShiftSting;
     [SerializeField] private TMP_Text objectiveLabel;
 
     private readonly HashSet<string> inspectedCheckpoints = new HashSet<string>();
@@ -172,10 +174,23 @@ public sealed class NPShiftProgress : MonoBehaviour
         if (CurrentStep != Step.Generator || !isOn)
             return;
 
-        if (generatorLoop && !generatorLoop.EventReference.IsNull)
+        if (generatorLoop && !generatorLoop.EventReference.IsNull && !generatorLoop.IsPlaying())
             generatorLoop.Play();
 
+        if (!generatorStartSound.IsNull)
+            RuntimeManager.PlayOneShot(generatorStartSound, generatorLever.transform.position);
+
         AdvanceTo(Step.SubmitReport);
+        if (!lateShiftSting.IsNull)
+            Invoke(nameof(PlayLateShiftSting), 1.25f);
+    }
+
+    private void OnDisable() => CancelInvoke(nameof(PlayLateShiftSting));
+
+    private void PlayLateShiftSting()
+    {
+        if (CurrentStep is Step.SubmitReport or Step.Sleep && !lateShiftSting.IsNull)
+            RuntimeManager.PlayOneShot(lateShiftSting);
     }
 
     public bool SubmitReport()

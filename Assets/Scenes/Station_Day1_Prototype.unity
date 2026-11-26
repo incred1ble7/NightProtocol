@@ -7804,6 +7804,59 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8700001, y: 0.23142856, z: 0.27500013}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &259623835
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 259623837}
+  - component: {fileID: 259623836}
+  m_Layer: 0
+  m_Name: Audio Interior - Front Wing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &259623836
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259623835}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.9799995, y: 2.52, z: 1.8699999}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &259623837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259623835}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000004371139}
+  m_LocalPosition: {x: -2.2000008, y: 1.96, z: -1.1450007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 689603490}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &261223769
 GameObject:
   m_ObjectHideFlags: 0
@@ -13455,6 +13508,20 @@ MonoBehaviour:
   - {fileID: 1239422633}
   - {fileID: 1371141923}
   - {fileID: 1346960183}
+  openSound:
+    Guid:
+      Data1: -1754849541
+      Data2: 1121912264
+      Data3: -882492231
+      Data4: -2097191263
+    Path: event:/sfx/Computer start
+  channelSwitchSound:
+    Guid:
+      Data1: -526497971
+      Data2: 1325326883
+      Data3: 1142959764
+      Data4: -509603861
+    Path: event:/sfx/Computer_Click
 --- !u!65 &390977909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14478,6 +14545,59 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.24000001, y: 0.24749947, z: 0.87}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &431723533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 431723535}
+  - component: {fileID: 431723534}
+  m_Layer: 0
+  m_Name: Audio Interior - Control Room
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &431723534
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431723533}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.28, y: 2.7999992, z: 5.28}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &431723535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431723533}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 26.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1672331499}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &432373031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14882,6 +15002,26 @@ PrefabInstance:
       propertyPath: shiftProgress
       value: 
       objectReference: {fileID: 1216986812}
+    - target: {fileID: 3757899612565971631, guid: 5116f63b026ab564b9bd100fb5676922, type: 3}
+      propertyPath: inspectSound.Path
+      value: event:/sfx/inspected
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757899612565971631, guid: 5116f63b026ab564b9bd100fb5676922, type: 3}
+      propertyPath: inspectSound.Guid.Data1
+      value: 1432009683
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757899612565971631, guid: 5116f63b026ab564b9bd100fb5676922, type: 3}
+      propertyPath: inspectSound.Guid.Data2
+      value: 1240200911
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757899612565971631, guid: 5116f63b026ab564b9bd100fb5676922, type: 3}
+      propertyPath: inspectSound.Guid.Data3
+      value: 685102214
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757899612565971631, guid: 5116f63b026ab564b9bd100fb5676922, type: 3}
+      propertyPath: inspectSound.Guid.Data4
+      value: 1844214593
+      objectReference: {fileID: 0}
     - target: {fileID: 4599870277709166063, guid: 5116f63b026ab564b9bd100fb5676922, type: 3}
       propertyPath: m_Size.x
       value: 1.7230769
@@ -16579,11 +16719,25 @@ MonoBehaviour:
   closeButton: {fileID: 470743711}
   interactionSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -36473138
+      Data2: 1089849421
+      Data3: -830472052
+      Data4: -122523207
+    Path: event:/sfx/interaction
+  buttonSound:
+    Guid:
+      Data1: -526497971
+      Data2: 1325326883
+      Data3: 1142959764
+      Data4: -509603861
+    Path: event:/sfx/Computer_Click
+  reportCompletedSound:
+    Guid:
+      Data1: -1828680841
+      Data2: 1287921365
+      Data3: 856953273
+      Data4: -1730455038
+    Path: event:/sfx/task finish
 --- !u!23 &486215749
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18430,6 +18584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 523856676}
   - component: {fileID: 523856675}
+  - component: {fileID: 523856677}
   m_Layer: 0
   m_Name: Interior_Light_Bedroom
   m_TagString: Untagged
@@ -18517,6 +18672,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 402868875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &523856677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523856674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &523978108
 GameObject:
   m_ObjectHideFlags: 0
@@ -19671,13 +19855,22 @@ MonoBehaviour:
   allowJumpAndSprint: 0
   interactionPrompt: {fileID: 1576274116}
   shiftProgress: {fileID: 1216986812}
-  footstepSound:
+  interiorAudio: {fileID: 796727303}
+  outdoorFootstepSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 2022320120
+      Data2: 1216883192
+      Data3: 1611573675
+      Data4: 1028085721
+    Path: event:/sfx/footsteps outside
+  indoorFootstepSound:
+    Guid:
+      Data1: -66585273
+      Data2: 1118101604
+      Data3: 366369710
+      Data4: -419690427
+    Path: event:/sfx/footsteps inside
+  towerStairSteps: {fileID: 2120370152}
   stepDistance: 1.5
 --- !u!143 &557911719
 CharacterController:
@@ -21179,6 +21372,7 @@ Transform:
   - {fileID: 1530797680}
   - {fileID: 2011373109}
   - {fileID: 184015707}
+  - {fileID: 1581325036}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &613251764
@@ -22840,6 +23034,8 @@ Transform:
   - {fileID: 1632692986}
   - {fileID: 402868875}
   - {fileID: 1936824521}
+  - {fileID: 918120418}
+  - {fileID: 259623837}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &691049098
@@ -25062,6 +25258,99 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 9102235223317426000, guid: 3f5cdead09efce649bc96437195025c8, type: 3}
+--- !u!1 &796727302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 796727304}
+  - component: {fileID: 796727303}
+  m_Layer: 0
+  m_Name: Day 1 Interior Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &796727303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796727302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5515fcad8c347424fa71aad40672c10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPInteriorAudio
+  player: {fileID: 557911719}
+  forestEmitter: {fileID: 1623146110}
+  defaultIndoorAmbient:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  interiorLowPassSnapshot:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  forestVolumeIndoors: 0.28
+  transitionSeconds: 0.75
+  tower:
+    zones:
+    - {fileID: 431723534}
+    indoorAmbient:
+      Guid:
+        Data1: 2011011701
+        Data2: 1153777215
+        Data3: -1205171070
+        Data4: 288486149
+      Path: event:/ambience tower
+  generatorRoom:
+    zones:
+    - {fileID: 1581325037}
+    indoorAmbient:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+  playerHouse:
+    zones:
+    - {fileID: 918120419}
+    - {fileID: 259623836}
+    indoorAmbient:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+--- !u!4 &796727304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796727302}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &799600237
 GameObject:
   m_ObjectHideFlags: 0
@@ -28010,6 +28299,59 @@ MonoBehaviour:
   onStateChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &918120417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 918120418}
+  - component: {fileID: 918120419}
+  m_Layer: 0
+  m_Name: Audio Interior - Main Room
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &918120418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918120417}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000004371139}
+  m_LocalPosition: {x: -3.5000017, y: 1.96, z: -3.3999999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 689603490}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &918120419
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918120417}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.58, y: 2.52, z: 2.7799997}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &923868688
 GameObject:
   m_ObjectHideFlags: 0
@@ -30997,6 +31339,46 @@ PrefabInstance:
     - target: {fileID: 5782453518966834952, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
       propertyPath: m_Name
       value: House_LightSwitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Path
+      value: event:/sfx/light
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Path
+      value: event:/sfx/light
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data1
+      value: 2044872218
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data2
+      value: 1237975015
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data3
+      value: -726617454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data4
+      value: 1944975419
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data1
+      value: 2044872218
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data2
+      value: 1237975015
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data3
+      value: -726617454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data4
+      value: 1944975419
       objectReference: {fileID: 0}
     - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
       propertyPath: controlledLights.Array.size
@@ -35493,18 +35875,18 @@ MonoBehaviour:
   initiallyOn: 0
   turnOnSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2107468826
+      Data2: 1194817619
+      Data3: 773430917
+      Data4: -1074653083
+    Path: event:/sfx/door sfx
   turnOffSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2107468826
+      Data2: 1194817619
+      Data3: 773430917
+      Data4: -1074653083
+    Path: event:/sfx/door sfx
   onStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -36722,6 +37104,20 @@ MonoBehaviour:
   - {fileID: 1990032897}
   generatorLever: {fileID: 1561601424}
   generatorLoop: {fileID: 1561601425}
+  generatorStartSound:
+    Guid:
+      Data1: 2025412668
+      Data2: 1122774527
+      Data3: 1079391920
+      Data4: -360587940
+    Path: event:/sfx/generator
+  lateShiftSting:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   objectiveLabel: {fileID: 152954403}
 --- !u!4 &1216986813
 Transform:
@@ -37436,6 +37832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1249976296}
   - component: {fileID: 1249976295}
+  - component: {fileID: 1249976297}
   m_Layer: 0
   m_Name: Interior_Light_Main
   m_TagString: Untagged
@@ -37523,6 +37920,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 402868875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1249976297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249976294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &1253517118
 GameObject:
   m_ObjectHideFlags: 0
@@ -38758,6 +39184,26 @@ PrefabInstance:
       propertyPath: shiftProgress
       value: 
       objectReference: {fileID: 1216986812}
+    - target: {fileID: 9098899986244936564, guid: b7d32fa104dec9145bec89153351c055, type: 3}
+      propertyPath: inspectSound.Path
+      value: event:/sfx/inspected
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098899986244936564, guid: b7d32fa104dec9145bec89153351c055, type: 3}
+      propertyPath: inspectSound.Guid.Data1
+      value: 1432009683
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098899986244936564, guid: b7d32fa104dec9145bec89153351c055, type: 3}
+      propertyPath: inspectSound.Guid.Data2
+      value: 1240200911
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098899986244936564, guid: b7d32fa104dec9145bec89153351c055, type: 3}
+      propertyPath: inspectSound.Guid.Data3
+      value: 685102214
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098899986244936564, guid: b7d32fa104dec9145bec89153351c055, type: 3}
+      propertyPath: inspectSound.Guid.Data4
+      value: 1844214593
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -45168,11 +45614,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 2025412668
+      Data2: 1122774527
+      Data3: 1079391920
+      Data4: -360587940
+    Path: event:/sfx/generator
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 2
@@ -45181,9 +45627,9 @@ MonoBehaviour:
   Preload: 0
   NonRigidbodyVelocity: 0
   Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1561601426 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1446665072979692058, guid: 84ece7b3db253b8408ed44cd0d0decea, type: 3}
@@ -45552,6 +45998,59 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4059545538186883889, guid: 15728a75e3ea3c74884e41fbdeb5fe53, type: 3}
+--- !u!1 &1581325035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1581325036}
+  - component: {fileID: 1581325037}
+  m_Layer: 0
+  m_Name: Audio Interior - Generator Room
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1581325036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581325035}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000004371139}
+  m_LocalPosition: {x: 0, y: 1.72, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 613037735}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1581325037
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581325035}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.7400017, y: 3.04, z: 6.54}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1581791782
 GameObject:
   m_ObjectHideFlags: 0
@@ -47427,18 +47926,18 @@ MonoBehaviour:
   initiallyOn: 0
   turnOnSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2107468826
+      Data2: 1194817619
+      Data3: 773430917
+      Data4: -1074653083
+    Path: event:/sfx/door sfx
   turnOffSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2107468826
+      Data2: 1194817619
+      Data3: 773430917
+      Data4: -1074653083
+    Path: event:/sfx/door sfx
   onStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -48372,6 +48871,7 @@ Transform:
   m_Children:
   - {fileID: 1046259616}
   - {fileID: 2120370152}
+  - {fileID: 431723535}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1673741729
@@ -51240,6 +51740,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoubleDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 7983862873069360475, guid: 32f27a1bdef5fa445852f3e9a774fe62, type: 3}
+      propertyPath: turnOnSound.Path
+      value: event:/sfx/door sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983862873069360475, guid: 32f27a1bdef5fa445852f3e9a774fe62, type: 3}
+      propertyPath: turnOffSound.Path
+      value: event:/sfx/door sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983862873069360475, guid: 32f27a1bdef5fa445852f3e9a774fe62, type: 3}
+      propertyPath: turnOnSound.Guid.Data1
+      value: -2107468826
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983862873069360475, guid: 32f27a1bdef5fa445852f3e9a774fe62, type: 3}
+      propertyPath: turnOnSound.Guid.Data2
+      value: 1194817619
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983862873069360475, guid: 32f27a1bdef5fa445852f3e9a774fe62, type: 3}
+      propertyPath: turnOnSound.Guid.Data3
+      value: 773430917
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983862873069360475, guid: 32f27a1bdef5fa445852f3e9a774fe62, type: 3}
+      propertyPath: turnOnSound.Guid.Data4
+      value: -1074653083
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983862873069360475, guid: 32f27a1bdef5fa445852f3e9a774fe62, type: 3}
+      propertyPath: turnOffSound.Guid.Data1
+      value: -2107468826
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983862873069360475, guid: 32f27a1bdef5fa445852f3e9a774fe62, type: 3}
+      propertyPath: turnOffSound.Guid.Data2
+      value: 1194817619
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983862873069360475, guid: 32f27a1bdef5fa445852f3e9a774fe62, type: 3}
+      propertyPath: turnOffSound.Guid.Data3
+      value: 773430917
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983862873069360475, guid: 32f27a1bdef5fa445852f3e9a774fe62, type: 3}
+      propertyPath: turnOffSound.Guid.Data4
+      value: -1074653083
+      objectReference: {fileID: 0}
     - target: {fileID: 8506023056630332602, guid: 32f27a1bdef5fa445852f3e9a774fe62, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.8
@@ -52893,6 +53433,46 @@ PrefabInstance:
     - target: {fileID: 5782453518966834952, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
       propertyPath: m_Name
       value: ControlRoom_LightSwitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Path
+      value: event:/sfx/light
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Path
+      value: event:/sfx/light
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data1
+      value: 2044872218
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data2
+      value: 1237975015
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data3
+      value: -726617454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOnSound.Guid.Data4
+      value: 1944975419
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data1
+      value: 2044872218
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data2
+      value: 1237975015
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data3
+      value: -726617454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
+      propertyPath: turnOffSound.Guid.Data4
+      value: 1944975419
       objectReference: {fileID: 0}
     - target: {fileID: 8722401315780274278, guid: f6d1cf89c59d0274c9a64e4929729ae0, type: 3}
       propertyPath: controlledLights.Array.size
@@ -56813,15 +57393,55 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 442345636909105737, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: onAction
-      value: OFF
+      value: ON
       objectReference: {fileID: 0}
     - target: {fileID: 442345636909105737, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: offAction
-      value: ON
+      value: OFF
       objectReference: {fileID: 0}
     - target: {fileID: 442345636909105737, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: displayName
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 442345636909105737, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Path
+      value: event:/sfx/lever sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 442345636909105737, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Path
+      value: event:/sfx/lever sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 442345636909105737, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data1
+      value: 1612102663
+      objectReference: {fileID: 0}
+    - target: {fileID: 442345636909105737, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data2
+      value: 1131916859
+      objectReference: {fileID: 0}
+    - target: {fileID: 442345636909105737, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data3
+      value: -1982415444
+      objectReference: {fileID: 0}
+    - target: {fileID: 442345636909105737, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data4
+      value: -753475264
+      objectReference: {fileID: 0}
+    - target: {fileID: 442345636909105737, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data1
+      value: 1612102663
+      objectReference: {fileID: 0}
+    - target: {fileID: 442345636909105737, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data2
+      value: 1131916859
+      objectReference: {fileID: 0}
+    - target: {fileID: 442345636909105737, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data3
+      value: -1982415444
+      objectReference: {fileID: 0}
+    - target: {fileID: 442345636909105737, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data4
+      value: -753475264
       objectReference: {fileID: 0}
     - target: {fileID: 815608596007058917, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: m_Size.x
@@ -56845,39 +57465,159 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1515099958844001561, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: onAction
-      value: OFF
+      value: ON
       objectReference: {fileID: 0}
     - target: {fileID: 1515099958844001561, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: offAction
-      value: ON
+      value: OFF
       objectReference: {fileID: 0}
     - target: {fileID: 1515099958844001561, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: displayName
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1515099958844001561, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Path
+      value: event:/sfx/lever sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515099958844001561, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Path
+      value: event:/sfx/lever sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515099958844001561, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data1
+      value: 1612102663
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515099958844001561, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data2
+      value: 1131916859
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515099958844001561, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data3
+      value: -1982415444
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515099958844001561, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data4
+      value: -753475264
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515099958844001561, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data1
+      value: 1612102663
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515099958844001561, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data2
+      value: 1131916859
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515099958844001561, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data3
+      value: -1982415444
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515099958844001561, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data4
+      value: -753475264
+      objectReference: {fileID: 0}
     - target: {fileID: 3718846131146497609, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: onAction
-      value: OFF
+      value: ON
       objectReference: {fileID: 0}
     - target: {fileID: 3718846131146497609, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: offAction
-      value: ON
+      value: OFF
       objectReference: {fileID: 0}
     - target: {fileID: 3718846131146497609, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: displayName
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3718846131146497609, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Path
+      value: event:/sfx/lever sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718846131146497609, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Path
+      value: event:/sfx/lever sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718846131146497609, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data1
+      value: 1612102663
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718846131146497609, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data2
+      value: 1131916859
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718846131146497609, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data3
+      value: -1982415444
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718846131146497609, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data4
+      value: -753475264
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718846131146497609, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data1
+      value: 1612102663
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718846131146497609, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data2
+      value: 1131916859
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718846131146497609, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data3
+      value: -1982415444
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718846131146497609, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data4
+      value: -753475264
+      objectReference: {fileID: 0}
     - target: {fileID: 4078700934020151262, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: onAction
-      value: OFF
+      value: ON
       objectReference: {fileID: 0}
     - target: {fileID: 4078700934020151262, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: offAction
-      value: 'ON '
+      value: OFF
       objectReference: {fileID: 0}
     - target: {fileID: 4078700934020151262, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: displayName
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078700934020151262, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Path
+      value: event:/sfx/lever sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078700934020151262, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Path
+      value: event:/sfx/lever sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078700934020151262, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data1
+      value: 1612102663
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078700934020151262, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data2
+      value: 1131916859
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078700934020151262, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data3
+      value: -1982415444
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078700934020151262, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data4
+      value: -753475264
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078700934020151262, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data1
+      value: 1612102663
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078700934020151262, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data2
+      value: 1131916859
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078700934020151262, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data3
+      value: -1982415444
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078700934020151262, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data4
+      value: -753475264
       objectReference: {fileID: 0}
     - target: {fileID: 4217125410808457456, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: m_Name
@@ -56894,6 +57634,46 @@ PrefabInstance:
     - target: {fileID: 5238969904351894504, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: initiallyOn
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238969904351894504, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Path
+      value: event:/sfx/lever sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238969904351894504, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Path
+      value: event:/sfx/lever sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238969904351894504, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data1
+      value: 1612102663
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238969904351894504, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data2
+      value: 1131916859
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238969904351894504, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data3
+      value: -1982415444
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238969904351894504, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data4
+      value: -753475264
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238969904351894504, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data1
+      value: 1612102663
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238969904351894504, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data2
+      value: 1131916859
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238969904351894504, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data3
+      value: -1982415444
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238969904351894504, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data4
+      value: -753475264
       objectReference: {fileID: 0}
     - target: {fileID: 6025467518415268873, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: m_Size.x
@@ -56917,27 +57697,107 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6216275976498825064, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: onAction
-      value: OFF
+      value: ON
       objectReference: {fileID: 0}
     - target: {fileID: 6216275976498825064, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: offAction
-      value: ON
+      value: OFF
       objectReference: {fileID: 0}
     - target: {fileID: 6216275976498825064, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: displayName
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6216275976498825064, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Path
+      value: event:/sfx/lever sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216275976498825064, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Path
+      value: event:/sfx/lever sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216275976498825064, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data1
+      value: 1612102663
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216275976498825064, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data2
+      value: 1131916859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216275976498825064, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data3
+      value: -1982415444
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216275976498825064, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data4
+      value: -753475264
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216275976498825064, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data1
+      value: 1612102663
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216275976498825064, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data2
+      value: 1131916859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216275976498825064, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data3
+      value: -1982415444
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216275976498825064, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data4
+      value: -753475264
+      objectReference: {fileID: 0}
     - target: {fileID: 6902618750720082810, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: onAction
-      value: OFF
+      value: ON
       objectReference: {fileID: 0}
     - target: {fileID: 6902618750720082810, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: offAction
-      value: ON
+      value: OFF
       objectReference: {fileID: 0}
     - target: {fileID: 6902618750720082810, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: displayName
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902618750720082810, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Path
+      value: event:/sfx/lever sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902618750720082810, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Path
+      value: event:/sfx/lever sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902618750720082810, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data1
+      value: 1612102663
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902618750720082810, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data2
+      value: 1131916859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902618750720082810, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data3
+      value: -1982415444
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902618750720082810, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOnSound.Guid.Data4
+      value: -753475264
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902618750720082810, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data1
+      value: 1612102663
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902618750720082810, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data2
+      value: 1131916859
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902618750720082810, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data3
+      value: -1982415444
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902618750720082810, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
+      propertyPath: turnOffSound.Guid.Data4
+      value: -753475264
       objectReference: {fileID: 0}
     - target: {fileID: 8971747882380400229, guid: a13d43890f30ddd47852816d6d1dfe9b, type: 3}
       propertyPath: m_Size.x
@@ -61199,3 +62059,4 @@ SceneRoots:
   - {fileID: 1180907129}
   - {fileID: 1640147053}
   - {fileID: 689603490}
+  - {fileID: 796727304}
