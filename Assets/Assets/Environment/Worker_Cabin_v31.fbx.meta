@@ -3,7 +3,57 @@ guid: 3f5cdead09efce649bc96437195025c8
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WC_Galvanized
+    second: {fileID: 2100000, guid: 236790ccdd6290b43a34ade1370b839b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WC_Glass
+    second: {fileID: 2100000, guid: 10dfac4af30d9b84d9f3c5f66893c318, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WC_Light_Emissive
+    second: {fileID: 2100000, guid: f9b6667b22a3de745b47478860919d40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WC_Roof_Profiled
+    second: {fileID: 2100000, guid: 87ee98b4e1db6b6468e229b049bd34d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WC_Wood_Planks
+    second: {fileID: 2100000, guid: b79194f42ae0d8548ba3bf527b7a4fc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WC_Wood_Structure
+    second: {fileID: 2100000, guid: c54c5b3d8d5a16248b65d60914a8711a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TS_WC_Metal_Details
+    second: {fileID: 2100000, guid: 891c3e9fba951f445968f58d28654ffe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TS_WC_Metal_Trim
+    second: {fileID: 2100000, guid: 6019ba6aa15e2154d85ed656065e9da1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TS_WC_Openings
+    second: {fileID: 2100000, guid: 9c7d25e68d5d11b48902e2c75f33420c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TS_WC_Wood_Trim
+    second: {fileID: 2100000, guid: 22d4a93432ef89545a5e2e185b48bae6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
