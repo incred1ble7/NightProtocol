@@ -226,7 +226,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 5031226355123802278}
   cacheVersion: 131861
-  cacheTime: 639313112343870518
+  cacheTime: 639313120469110874
   SerializableEventsDict:
   - key: event:/sfx/lever sfx
     index: 0
@@ -261,10 +261,10 @@ MonoBehaviour:
   Path: ../../../Desktop/Other/Night Protocol Bank/np/Build/Desktop/sfx.bank
   Name: sfx
   StudioPath: bank:/sfx
-  lastModified: 639313112343870518
+  lastModified: 639313120469110874
   FileSizes:
   - Name: Desktop
-    Value: 2021984
+    Value: 2155040
   Exists: 1
 --- !u!114 &712124453880434791
 MonoBehaviour:
@@ -488,10 +488,10 @@ MonoBehaviour:
     Data4: -753475264
   Banks:
   - {fileID: 561397230235831102}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 746
